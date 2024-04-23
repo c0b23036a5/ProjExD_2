@@ -43,6 +43,7 @@ def main():
     bk_rct=bk_img.get_rect()
     bk_rct.center=random.randint(0,WIDTH),random.randint(0,HEIGHT)
     vx,vy=+5,-5
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: 
