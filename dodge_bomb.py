@@ -57,6 +57,8 @@ def main():
                 sum_mv[1] +=v[1] 
 
         kk_rct.move_ip(sum_mv)
+        if check_bound(kk_rct) != (True, True):
+            kk_rct.move_ip(-sum_mv[0], -sum_mv[1])
         screen.blit(kk_img, kk_rct)
         # 爆弾の移動と表示
         bk_rct.move_ip(vx,vy)
