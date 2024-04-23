@@ -42,8 +42,7 @@ def main():
 
         kk_rct.move_ip(sum_mv)
         screen.blit(kk_img, kk_rct)
-        bk_rct.move_ip(vx,vy)
-        screen.blit(bk_img,bk_rct)
+        
         pg.display.update()
         tmr += 1
         clock.tick(50)
