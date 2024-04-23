@@ -30,13 +30,15 @@ def check_bound(obj_rct:pg.Rect) -> tuple[bool, bool]:
 
 
 def rote_bir(kk_dir:list) -> list[bool, bool]:
+    dir=0
     """
     移動方向からこうかとんの向いている方向を決定する関数
     引数：移動する値のリスト
     戻り値：角度8方向のうちのひとつ
     """
-    dir = 0
+    
     dir_lst = [0, 45, 90, 135, 180, 225, 270, 315]#360/8の倍数
+
     if kk_dir[0]==-5 and kk_dir[1]==0:
         dir = 0
     if kk_dir[0]==-5 and kk_dir[1]==5:
@@ -64,7 +66,7 @@ def big_bomb(screen):
     """
     accs = [a for a in range(1, 11)]
     for r in range(1, 11):
-    bb_img = pg.Surface((20*r, 20*r))
+        bb_img = pg.Surface((20*r, 20*r))
     pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
     avx = vx*bb_accs[min(tmr//500, 9)]
     bb_img = bb_imgs[min(tmr//500, 9)]
