@@ -47,6 +47,9 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: 
                 return
+        if kk_rct.colliderect(bk_rct):
+            print("Game Over")
+            return
         screen.blit(bg_img, [0, 0]) 
          # こうかとんの移動と表示
         key_lst = pg.key.get_pressed()
