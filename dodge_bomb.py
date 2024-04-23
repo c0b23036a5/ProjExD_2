@@ -61,15 +61,21 @@ def rote_bir(kk_dir:list) -> list[bool, bool]:
 def big_bomb(screen):
     """
     時間とともに爆弾を10段階程度で拡大，加速させる関数
-    引数：screen
+    引数：vx,vyにするつもりですが、vx,vyのままで未完成だとプログラムが動かないのでscreenを引数として設定しました。
+    #1の部分
     戻り値　拡大率と加速度のリストのタプル
     """
+    """
+    以下は試行錯誤した形跡です。未完成だとプログラムが動かないのでここをコメントアウトしました。
     accs = [a for a in range(1, 11)]
+    bb_imgs=[]#2の部分
     for r in range(1, 11):
         bb_img = pg.Surface((20*r, 20*r))
     pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
     avx = vx*bb_accs[min(tmr//500, 9)]
+    
     bb_img = bb_imgs[min(tmr//500, 9)]
+    """
     print("時間切れ")
 
 
@@ -80,6 +86,9 @@ def follow_bomb(screen):
     上記の条件を満たす関数
     引数：screen
     戻り値　上記の条件を満たす爆弾の速度ベクトル（タプル）
+    """
+    """
+    bomb_dir=[0,1]
     """
     print("時間切れ")
     
